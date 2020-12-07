@@ -1,10 +1,10 @@
 # esbuild Project Starter
 This is a skeletal web/js project using esbuild. It includes the following features
 
-1. Bundling the projects JS code into a single `app.js` file, using esbuild budler.
-2. Run a server to serve the bundled code.
-3. Run unit tests using web-test-runner and chai.
-4. Run lint using eslint.
+1. Bundling the projects JS code into a single `app.js` file, using __esbuild__ budler.
+2. Run a server to serve the bundled code using __serve__.
+3. Run unit tests using __web-test-runner__ and __chai__.
+4. Run lint using __ESLint__.
 
 ## Project Directory Structure
 
@@ -79,3 +79,4 @@ npm run lint
 * Web Test Runner: https://modern-web.dev/docs/test-runner/overview/
 * Chai: https://www.chaijs.com/api/bdd/
 * ESLint: https://eslint.org/docs/rules/
+* serve: https://www.npmjs.com/package/serve
