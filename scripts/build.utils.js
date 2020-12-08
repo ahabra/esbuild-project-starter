@@ -16,12 +16,13 @@ function copyIndexHtml() {
   fs.writeFileSync(dist + '/index.html', html)
 }
 
-function build() {
+function build(isProd) {
   const buildOptions = {
     entryPoints: ['src/index.js'],
     bundle: true,
     sourcemap: true,
-    outfile: dist + '/app.js'
+    outfile: dist + '/app.js',
+    minify: isProd
   };
 
   const buildResult = esbuild.build(buildOptions)
