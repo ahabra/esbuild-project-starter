@@ -58,7 +58,7 @@ npm run build:prod
 ```bash
 npm run server
 ```
-The root directory of the server will be the `target/` directory.
+The root directory of the server will be the `target/` directory. It will recreate the bundle for every `*.html` file request. Note that `esbuild` is a very fast bundler, so re-budling should not slow down you page requests.
 
 ### Run Tests
 Test files names should follow the pattern `*.test.js`. Look at `src/utils/test/` for examples.
