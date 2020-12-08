@@ -22,7 +22,7 @@ function build(isProd) {
     bundle: true,
     sourcemap: true,
     outfile: dist + '/app.js',
-    minify: isProd
+    minify: !!isProd
   };
 
   const buildResult = esbuild.build(buildOptions)
