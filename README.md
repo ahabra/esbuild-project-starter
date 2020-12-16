@@ -32,10 +32,10 @@ After you clone this repo to your local machine:
 
 ```bash
 cd esbuild-project-starter
-npm install
+npm ci
 ```
 
-The above will download the `node_modules` dependencies of this project.
+The above will download the `node_modules` dependencies of this project without modifying `package-lock.json`.
 
 ### Building
 

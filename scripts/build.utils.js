@@ -2,6 +2,7 @@
 
 const fs = require('fs')
 const esbuild = require('esbuild')
+const Print = require('./console.utils').Print
 
 const dist = 'target/dist'
 
@@ -29,8 +30,32 @@ function build(isProd) {
   buildResult.catch(() => process.exit(1))
 }
 
+function nodeVersion() {
+  let v = process.versions.node.split('.')
+  if (v.length < 3) {
+    v.unshift('0')
+  }
+  v = v.map(p => parseInt(p, 10))
+  return {
+    major: v[0],
+    minor: v[1],
+    patch: v[2]
+  }
+}
+
+function checkNodeVersion(majorMinimum) {
+  const version = nodeVersion()
+  if (version.major < majorMinimum) {
+    Print.error(`Invalid node version. You have ${version.major}. Require ${majorMinimum}.`)
+    return false
+  }
+  return true
+}
+
 module.exports = {
   clean,
   copyIndexHtml,
-  build
+  build,
+  nodeVersion,
+  checkNodeVersion
 }

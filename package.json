@@ -5,6 +5,10 @@
   "author": "Abdul Habra",
   "license": "Apache",
   "main": "index.js",
+  "engines": {
+    "node": ">=15.0.0",
+    "npm": "7.0.0"
+  },
   "scripts": {
     "clean": "rm -rf target",
     "build": "node scripts/build.js",
