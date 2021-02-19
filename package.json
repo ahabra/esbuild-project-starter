@@ -1,6 +1,6 @@
 {
   "name": "esbuild-starter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "esbuild project starter",
   "author": "Abdul Habra",
   "license": "Apache",
@@ -20,12 +20,12 @@
   },
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.0",
-    "@web/test-runner": "^0.12.14",
+    "@web/test-runner": "^0.12.15",
     "@web/test-runner-commands": "^0.4.1",
     "@web/test-runner-puppeteer": "^0.9.3",
     "chalk": "^4.1.0",
-    "esbuild": "^0.8.43",
-    "eslint": "^7.19.0",
+    "esbuild": "^0.8.49",
+    "eslint": "^7.20.0",
     "serve": "^11.3.2"
   },
   "dependencies": {}
