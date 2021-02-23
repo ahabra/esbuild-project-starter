@@ -24,7 +24,7 @@
     "@web/test-runner-commands": "^0.4.1",
     "@web/test-runner-puppeteer": "^0.9.3",
     "chalk": "^4.1.0",
-    "esbuild": "^0.8.49",
+    "esbuild": "^0.8.51",
     "eslint": "^7.20.0",
     "serve": "^11.3.2"
   },
