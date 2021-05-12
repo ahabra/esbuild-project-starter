@@ -1,6 +1,6 @@
 {
   "name": "esbuild-starter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "esbuild project starter",
   "author": "Abdul Habra",
   "license": "Apache",
@@ -16,17 +16,19 @@
     "server": "node scripts/server.js",
     "test": "npm run lint && web-test-runner",
     "test:watch": "web-test-runner --watch",
-    "lint": "eslint src --fix"
+    "lint": "eslint src --fix",
+    "deps:list": "ncu",
+    "deps:up": "ncu -u"
   },
   "devDependencies": {
-    "@esm-bundle/chai": "^4.3.0",
-    "@web/test-runner": "^0.12.15",
-    "@web/test-runner-commands": "^0.4.1",
-    "@web/test-runner-puppeteer": "^0.9.3",
-    "chalk": "^4.1.0",
-    "esbuild": "^0.8.51",
-    "eslint": "^7.20.0",
+    "@esm-bundle/chai": "^4.3.4",
+    "@web/test-runner": "^0.13.4",
+    "@web/test-runner-commands": "^0.4.5",
+    "@web/test-runner-puppeteer": "^0.10.0",
+    "chalk": "^4.1.1",
+    "esbuild": "^0.11.20",
+    "eslint": "^7.26.0",
+    "npm-check-updates": "^11.5.11",
     "serve": "^11.3.2"
-  },
-  "dependencies": {}
+  }
 }
