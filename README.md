@@ -9,7 +9,7 @@ This is a skeletal web/js project using esbuild. It includes the following featu
 ## Project Directory Structure
 
 1. The root of the project conatins these files
-    1. `.eslintrc`: ES Lint customized rules
+    1. `.eslintrc.js`: ES Lint customized rules
     2. `.gitignore`: List of files to be ignored by git
     3. `package.json`, `package-lock.json`: NPM package definition.
     4. `README.md`: This file.

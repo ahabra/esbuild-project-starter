@@ -1,23 +1,23 @@
 /** Utilities used by both build.js and server.js */
 
-const fs = require('fs')
-const esbuild = require('esbuild')
-const Print = require('./console.utils').Print
+import fs from 'fs'
+import esbuild from 'esbuild'
+import { Print} from './console.utils.mjs'
 
 const dist = 'target/dist'
 
-function clean() {
+export function clean() {
   fs.rmSync(dist, { recursive: true, force: true})
 }
 
-function copyIndexHtml() {
+export function copyIndexHtml() {
   let html = fs.readFileSync('src/index.html', {encoding: 'utf8'})
   html = html.replace('<script data-app></script>', '<script data-app src="./app.js"></script>')
   fs.mkdirSync(dist, {recursive: true})
   fs.writeFileSync(dist + '/index.html', html)
 }
 
-function build(isProd) {
+export function build(isProd) {
   const buildOptions = {
     entryPoints: ['src/index.js'],
     bundle: true,
@@ -30,7 +30,7 @@ function build(isProd) {
   buildResult.catch(() => process.exit(1))
 }
 
-function nodeVersion() {
+export function nodeVersion() {
   let v = process.versions.node.split('.')
   if (v.length < 3) {
     v.unshift('0')
@@ -43,19 +43,11 @@ function nodeVersion() {
   }
 }
 
-function checkNodeVersion(majorMinimum) {
+export function checkNodeVersion(majorMinimum) {
   const version = nodeVersion()
   if (version.major < majorMinimum) {
     Print.error(`Invalid node version. You have ${version.major}. Require ${majorMinimum}.`)
     return false
   }
   return true
-}
-
-module.exports = {
-  clean,
-  copyIndexHtml,
-  build,
-  nodeVersion,
-  checkNodeVersion
 }
