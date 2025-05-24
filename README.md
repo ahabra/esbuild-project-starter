@@ -9,7 +9,7 @@ This is a skeletal web/js project using esbuild. It includes the following featu
 ## Project Directory Structure
 
 1. The root of the project contains these files
-    1. `.eslintrc.js`: ES Lint customized rules
+    1. `eslint.config.js`: ES Lint customized rules
     2. `.gitignore`: List of files to be ignored by git
     3. `package.json`, `package-lock.json`: NPM package definition.
     4. `README.md`: This file.
@@ -58,7 +58,8 @@ npm run build:prod
 ```bash
 npm run server
 ```
-The root directory of the server will be the `target/` directory. It will recreate the bundle for every `*.html` file request. Note that `esbuild` is a very fast bundler, so re-bundling should not slow down you page requests.
+The root directory of the server will be the `target/` directory. It will recreate the bundle for every `*.html` file request.
+Note that `esbuild` is a very fast bundler, so re-bundling should not slow down you page requests.
 
 ### Run Tests
 Test files names should follow the pattern `*.test.js`. Look at `src/utils/test/` for examples.
