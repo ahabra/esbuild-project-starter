@@ -1,5 +1,8 @@
 # esbuild Project Starter
-This is a skeletal web/js project using esbuild. It includes the following features
+[esbuild](https://esbuild.github.io/) is a __very__ fast web bundler.
+This repo defines a skeletal web/js project including linting, testing, local running, and bundling using esbuild.
+
+It includes the following features:
 
 1. Bundling the projects JS code into a single `app.js` file, using [esbuild](https://esbuild.github.io/) bundler.
 2. Run a server to serve the bundled code using [serve](https://www.npmjs.com/package/serve).
